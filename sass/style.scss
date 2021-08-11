@@ -1,0 +1,26 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+$color-main: #22a6b3;
+$font-main: 'Montserrat', sans-serif;
+$font-intro: 'Petit Formal Script', cursive;
+$font-text: 'Open Sans Condensed', sans-serif;
+
+body {
+    margin: 50px;
+    text-align: center;
+    background: $color-main;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+header {
+      & i {
+        font-size: 50px;
+      }
+      & h1 {
+        font-family: $font-intro;
+     }
+}

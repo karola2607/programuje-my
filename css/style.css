@@ -1,0 +1,21 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 50px;
+  text-align: center;
+  background: #22a6b3;
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+header i {
+  font-size: 50px;
+}
+
+header h1 {
+  font-family: "Petit Formal Script", cursive;
+}
+/*# sourceMappingURL=style.css.map */
