@@ -2,25 +2,430 @@
 	box-sizing: border-box;
 }
 
-$color-main: #22a6b3;
+/*Variables*/
+
+$color-main: #44b9a6;
+$color-overlay: #2dd19a;
+$color-buttons: #797171;
+$color-text-light: #ffffff;
+$color-text-dark: #2c2c54;
+
 $font-main: 'Montserrat', sans-serif;
 $font-intro: 'Petit Formal Script', cursive;
 $font-text: 'Open Sans Condensed', sans-serif;
 
+$transition: all 1s;
+
+/* Global */
 body {
-    margin: 50px;
-    text-align: center;
-    background: $color-main;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.7;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  font-family: $font-text;
+  color: $color-text-dark;
 }
 
+.container {
+  width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+  
+section {
+  padding: 96px 0;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 160px;
+  margin: 24px auto 0 auto;
+  padding: 16px;
+  border-radius: 5px;
+  font-family: $font-text;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 2px;
+  border-style: solid;
+  background-color: inherit;
+  background-position: 100% 0;
+  background-size: 300%;
+  transition: $transition;
+}
+
+/*Navigation*/
+
+.navigation {
+  background-color: $color-main;
+  padding: 12px 0;
+}
+
+.navigation ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+ 
+.navigation ul li {
+ display: inline-block;
+ margin: 0 36px 0 0;
+ position: relative;
+}
+
+.navigation ul li a {
+  text-decoration: none;
+  color: $color-text-light;
+}
+
+.navigation a:hover {
+  color: $color-overlay;
+}
+
+.navigation ul ul li {
+  display: block;
+  margin: 0 0 12px 0;
+}
+
+.navigation ul li > ul {
+  display: none;
+  position: absolute;
+  background-color: $color-text-light;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 0 0 0;
+}
+
+.navigation li:hover ul {
+  display: block;
+  text-align: center;
+}
+
+.navigation ul ul li a {
+  color: $color-main;   
+  display: block; 
+  padding: 0 24px;
+}
+  
+.navigation ul ul li:hover a {
+  color: $color-overlay;
+}
+
+
+/* Header */
 header {
+  text-align: center;
+  background: $color-main;
+  color: #fff;
+  font-size: 24px;
+  line-height: 1.7;
+  padding: 50px;
+
       & i {
         font-size: 50px;
       }
       & h1 {
         font-family: $font-intro;
      }
+}
+
+/* Section "our projects" */
+
+.our-projects {
+  font-family: $font-intro;
+}
+
+.work-types {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.work-box {
+  flex: 0 0 50%;
+  min-height: 300px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 96px;
+}
+
+.container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.work-box .picture {
+  max-width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+}
+
+.picture::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  opacity: 0.3;
+  background: $color-overlay;
+  width: 100%;
+  height: 100%;
+  transition: $transition;
+}
+
+.picture:hover:after {
+  top: 0;
+  left: 0;
+  transition: $transition;
+}
+.picture:after:after {
+  top: 20;
+  left: 20;
+  transition: $transition;
+}
+
+
+.work-box .box-text {
+  max-width: 200px;
+  height: 100%;
+  position: absolute;
+  text-align: left;
+  right: 100px;
+}
+
+.work-box .box-text .work-box-title {
+  font-weight: bold;
+  font-size: 24px;
+}
+  
+.work-box p:last-of-type {
+  font-weight: bold;
+}
+
+.work-box p {
+  margin: 0;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Button "read more" */
+
+.btn-five {
+  border: none;
+  margin: 20 0 0 0;
+  padding: 0;
+  color: $color-overlay;
+  text-align: left;
+}
+
+a.btn-five:hover {
+  color: $color-text-dark;
+}
+
+/* Contact form*/
+
+.contact {
+  background-color: $color-main; 
+}
+
+.contact-form-title {
+  font-size: 50px;
+  font-family: "Inconsolata", monospace;
+  font-weight: bold; 
+  text-align: left;
+  padding-left: 15px;
+  }
+    
+.formular {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  color: $color-text-light;
+}
+
+.contact-form {
+    flex: 2 0 0;
+}
+
+.contact-infos {
+    flex: 1 0 0;
+    max-width: 100%;
+}
+
+
+input, textarea {
+  background-color: $color-main;
+  border: none;
+  border-bottom: 4px solid $color-text-light;
+  color: $color-text-light;
+  font-family: "Inconsolata", monospace;
+}
+  
+ 
+input {
+  height: 50px;
+  }
+
+.btn-sixth {
+    border-color: $color-text-light;
+    color: $color-text-light;
+    background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+}
+
+.btn:hover {
+    background-position: 0 100%;
+    color: #ffffff;
+}
+
+.btn-sixth:hover {
+    color: $color-main;
+}
+  
+
+input::placeholder, textarea::placeholder {
+  color: $color-text-light; }
+
+fieldset {
+    border: none;
+}
+
+.infos-title {
+    font-size: 20px;
+}
+
+
+
+
+/* Footer */
+
+.page-footer {
+    height: 200px;
+    background-color: $color-text-light;
+    
+}
+
+.container-footer {
+    padding: 48px 0;
+    text-align: center;
+}
+
+
+.container-footer ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-footer ul li {
+    font-size: 0;
+    padding: 10px;
+}
+
+.container-footer ul li i {
+    font-size: 30px;
+    height: 60px;
+    width: 60px;
+    background: $color-buttons;
+    border-radius: 50%;
+    line-height: 60px;
+    color: $color-text-light;
+}
+
+/* Media */
+
+@media (max-width: 767px) {
+ .work-types, .formular{
+  flex-direction: column;
+  margin: auto;
+  }
+  
+  
+  /* Our projects */
+  
+  .work-box .picture {
+      max-width: 100%;
+      height: 160px;
+      min-height: 0;
+      left: 40px;
+  }
+  
+  .work-box .box-text {
+      max-width: 100%;
+      height: 160px;
+      min-height: 0;
+      position: relative;
+      right: 0;
+      top: 180px;
+  }
+
+  
+  /* Contact */
+  
+  .contact-infos {
+      margin-top: 40px;
+  }
+  
+  input, textarea {
+      max-width: 300px;
+      display: block;
+  }
+  
+  /* Footer */
+  
+  .page-footer {
+      max-width: 300px;
+  }
+  
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .work-types {
+  flex-direction: column;
+  margin: auto;
+  }
+  
+  
+  /* Contact */
+  
+  .contact-infos {
+      margin-top: 40px;
+      max-width: 300px;
+      flex: 1 0 0;
+  }
+  
+  .formular {
+      max-width: 700px;
+  }
+  
+  .contact-form {
+      flex: 1 0 0;
+  }
+  
+  input, textarea {
+      max-width: 300px;
+      display: block;
+  }
+  
+  /* Footer */
+  
+  .page-footer {
+      max-width: 700px;
+  }
+  
 }
