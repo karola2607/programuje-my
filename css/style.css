@@ -43,7 +43,7 @@ section {
 
 /*Navigation*/
 .navigation {
-  background-color: #cab192;
+  background-color: #d1ccc0;
   padding: 12px 0;
 }
 
@@ -65,7 +65,7 @@ section {
 }
 
 .navigation a:hover {
-  color: #b46709;
+  color: #84817a;
 }
 
 .navigation ul ul li {
@@ -88,13 +88,13 @@ section {
 }
 
 .navigation ul ul li a {
-  color: #cab192;
+  color: #d1ccc0;
   display: block;
   padding: 0 24px;
 }
 
 .navigation ul ul li:hover a {
-  color: #b46709;
+  color: #84817a;
 }
 
 .navigation .nav {
@@ -120,7 +120,7 @@ section {
 /* Header */
 header {
   text-align: center;
-  background: #cab192;
+  background: #d1ccc0;
   color: #fff;
   font-size: 24px;
   line-height: 1.7;
@@ -185,7 +185,7 @@ header h1 {
   top: 20px;
   left: 20px;
   opacity: 0.3;
-  background: #b46709;
+  background: #84817a;
   width: 100%;
   height: 100%;
   transition: all 1s;
@@ -234,7 +234,7 @@ header h1 {
   border: none;
   margin: 20 0 0 0;
   padding: 0;
-  color: #b46709;
+  color: #84817a;
   text-align: left;
 }
 
@@ -242,9 +242,112 @@ a.btn-five:hover {
   color: #2c2c54;
 }
 
+/*Our team*/
+.our-team {
+  font-family: "Petit Formal Script", cursive;
+}
+
+.our-team i {
+  font-size: 100px;
+}
+
+.team-box {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+}
+
+.present-box {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  min-height: 300px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 0 50px 0;
+}
+
+.present-box .photo {
+  max-width: 250px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  border-radius: 25px;
+}
+
+.present-box .present-text {
+  max-width: 200px;
+  height: 100%;
+  position: absolute;
+  text-align: left;
+  right: 100px;
+}
+
+.present-box .present-text .present-box-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 20px;
+}
+
+.present-box p:last-of-type {
+  font-weight: bold;
+}
+
+.present-box p {
+  margin: 10px;
+}
+
+.present-text {
+  background-color: #d1ccc0;
+  border-radius: 25px;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 32px;
+}
+
+.section-describe {
+  background-color: #aaa69d;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  text-align: center;
+  border: 2px solid #d1ccc0;
+  padding: 10px;
+  border-radius: 25px;
+  max-width: 450px;
+}
+
+.team-describe {
+  -ms-flex: 0 0 50%;
+      flex: 0 0 50%;
+  min-height: 300px;
+  text-align: left;
+  position: relative;
+  margin-bottom: 50px;
+  font-family: "Montserrat", sans-serif;
+}
+
 /* Contact form*/
 .contact {
-  background-color: #cab192;
+  background-color: #d1ccc0;
 }
 
 .contact-form-title {
@@ -278,7 +381,7 @@ a.btn-five:hover {
 }
 
 input, textarea {
-  background-color: #cab192;
+  background-color: #d1ccc0;
   border: none;
   border-bottom: 4px solid #ffffff;
   color: #ffffff;
@@ -302,7 +405,7 @@ input {
 }
 
 .btn-sixth:hover {
-  color: #cab192;
+  color: #d1ccc0;
 }
 
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
@@ -351,7 +454,7 @@ fieldset {
   font-size: 30px;
   height: 60px;
   width: 60px;
-  background: #797171;
+  background: #aaa69d;
   border-radius: 50%;
   line-height: 60px;
   color: #ffffff;
